@@ -10,8 +10,8 @@ class Cart(db.Model): # Singlular Capital
     product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('products.id')), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
 
-    cart_products_relationship = db.relationship('Product', backpopulates='product_cart_relationship')
-    cart_users_relationship = db.relationship('User', backpopulates='user_cart_relationship')
+    cart_products_relationship = db.relationship('Product', backpopulates='product_carts_relationship')
+    cart_users_relationship = db.relationship('User', backpopulates='user_carts_relationship')
 
     def to_dict(self):
         return {

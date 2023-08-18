@@ -18,7 +18,7 @@ class User(db.Model, UserMixin):
     role = db.Column(db.Boolean, nullable=False)
 
     user_reviews_relationship = db.relationship('Review', back_populates='review_users_relationship')
-    user_cart_relationship = db.relationship('Cart', back_populates='cart_users_relationship')
+    user_carts_relationship = db.relationship('Cart', back_populates='cart_users_relationship')
 
     @property
     def password(self):

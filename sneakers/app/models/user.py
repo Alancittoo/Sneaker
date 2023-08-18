@@ -13,6 +13,12 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
+    fname = db.Column(db.String(40), nullable=False, unique=False)
+    lname = db.Column(db.String(40), nullable=False, unique=False)
+    role = db.Column(db.Boolean, nullable=False)
+
+    user_reviews_relationship = db.relationship('Review', back_populates='review_users_relationship')
+    user_cart_relationship = db.relationship('Cart', back_populates='cart_users_relationship')
 
     @property
     def password(self):
@@ -29,5 +35,18 @@ class User(db.Model, UserMixin):
         return {
             'id': self.id,
             'username': self.username,
-            'email': self.email
+            'email': self.email,
+            'fname': self.fname,
+            'lname': self.lname,
+            'role': self.role,
+        }
+
+    def to_dict_no_items(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'email': self.email,
+            'fname': self.fname,
+            'lname': self.lname,
+            'role': self.role
         }

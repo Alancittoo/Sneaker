@@ -18,6 +18,7 @@ class Cart(db.Model): # Singlular Capital
             'id': self.id,
             'product_id': self.product_id,
             'user_id': self.user_id
+            
         }
 
     def to_dict_no_item(self):

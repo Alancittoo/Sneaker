@@ -5,73 +5,92 @@ from sqlalchemy.sql import text
 def seed_products():
     product1 = Product(
         name = 'Jordan 1',
-        image = 'url',
+        image = 'url1',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = True,
+        review_id = 1
+        
     )
     product2 = Product(
         name = 'Jordan 2',
-        image = 'url',
+        image = 'url2',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = True,
+        review_id = 1
+
     )
     product3 = Product(
         name = 'Jordan 3',
-        image = 'url',
+        image = 'url3',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = True,
+        review_id = 1
+
     )
     product4 = Product(
         name = 'Jordan 4',
-        image = 'url',
+        image = 'url4',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = True,
+        review_id = 1
+
     )
     product5 = Product(
         name = 'Jordan 5',
-        image = 'url',
+        image = 'url5',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = False,
+        review_id = 1
+
     )
     product6 = Product(
         name = 'Jordan 6',
-        image = 'url',
+        image = 'url6',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = True,
+        review_id = 1
+
     )
     product7 = Product(
         name = 'Jordan 7',
-        image = 'url',
+        image = 'url7',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = True,
+        review_id = 1
+
     )
     product8 = Product(
         name = 'Jordan 8',
-        image = 'url',
+        image = 'url8',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = False,
+        review_id = 1
+
     )
     product9 = Product(
         name = 'Jordan 9',
-        image = 'url',
+        image = 'url9',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = True,
+        review_id = 1
+
     )
     product10 = Product(
         name = 'Jordan 10',
-        image = 'url',
+        image = 'url10',
         description = 'Rock out in these new shoes for the school year',
         type = 'Jordans',
         status = False,
+        review_id = 1
     )
 
 
@@ -88,10 +107,10 @@ def seed_products():
     db.session.commit()
 
 
-    def undo_products():
-        if environment == "production":
-            db.session.execute(f"TRUNCATE table {SCHEMA}.products RESTART IDENTITY CASCADE;")
-        else:
-            db.session.execute(text("DELETE FROM products"))
+def undo_products():
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.products RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute(text("DELETE FROM products"))
 
-        db.session.commit()
+    db.session.commit()

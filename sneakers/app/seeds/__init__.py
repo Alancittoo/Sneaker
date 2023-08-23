@@ -50,4 +50,6 @@ def undo():
 #pipenv run flask db migrate
 #pipenv run flask db upgrade
 #pipenv run flask seed all
+
 #pipenv run flask seed undo
+# pipenv run flask db downgrade

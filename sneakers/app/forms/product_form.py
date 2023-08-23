@@ -3,7 +3,7 @@ from wtforms import StringField, IntegerField, BooleanField
 from wtforms.validators import DataRequired
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 
-class productForm(FlaskForm):
+class ProductForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     # image = FileField('Image', validators=[FileRequired(), FileAllowed()])
     description = StringField('Description', validators=[DataRequired()])
@@ -12,7 +12,7 @@ class productForm(FlaskForm):
     price = IntegerField('Price', validators=[DataRequired()])
 
 
-class productUpdateForm(FlaskForm):
+class ProductUpdateForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     # image = FileField('Image', validators=[FileRequired(), FileAllowed()])
     description = StringField('Description', validators=[DataRequired()])

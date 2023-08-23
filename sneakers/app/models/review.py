@@ -13,8 +13,8 @@ class Review(db.Model): # Singlular Capital
     product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('products.id')), nullable=False)
     user_id =db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
 
-    # review_products_relationship = db.relationship('Product', back_populates='product_reviews_relationship')
-    review_products_relationship = db.relationship('Product', back_populates='product_reviews', foreign_keys=[product_id], remote_side=[Product.id])
+    review_products_relationship = db.relationship('Product', back_populates='product_reviews_relationship')
+    # review_products_relationship = db.relationship('Product', back_populates='product_reviews', foreign_keys=[product_id], remote_side=[product_id])
     review_users_relationship = db.relationship('User', back_populates='user_reviews_relationship')
 
     def to_dict(self):

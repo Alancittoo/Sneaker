@@ -41,6 +41,7 @@ def undo():
 
 
 
+#install py3, run commands for inner terminals
 
 #commands in terminal
 #pipenv shell -- entering environment

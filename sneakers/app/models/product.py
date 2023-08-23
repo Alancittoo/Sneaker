@@ -13,6 +13,7 @@ class Product(db.Model): # Singlular Capital
     description = db.Column(db.String, unique=True, nullable=False)
     type = db.Column(db.String(40), nullable=False)
     status = db.Column(db.Boolean)
+    price = db.Column(db.Integer, nullable=False)
     # review_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('reviews.id')), nullable=True)
 
     product_reviews_relationship = db.relationship('Review', back_populates='review_products_relationship', foreign_keys='Review.product_id')

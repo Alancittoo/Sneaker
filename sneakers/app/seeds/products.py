@@ -9,7 +9,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year1',
         type = 'Jordans',
         status = True,
-
+        price = 100
     )
     product2 = Product(
         name = 'Jordan 2',
@@ -17,6 +17,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year2',
         type = 'Jordans',
         status = True,
+        price = 100
 
     )
     product3 = Product(
@@ -25,6 +26,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year3',
         type = 'Jordans',
         status = True,
+        price = 100
 
     )
     product4 = Product(
@@ -33,6 +35,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year4',
         type = 'Jordans',
         status = True,
+        price = 100
 
     )
     product5 = Product(
@@ -41,6 +44,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year5',
         type = 'Jordans',
         status = False,
+        price = 100
 
     )
     product6 = Product(
@@ -49,6 +53,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year6',
         type = 'Jordans',
         status = True,
+        price = 100
 
     )
     product7 = Product(
@@ -57,6 +62,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year7',
         type = 'Jordans',
         status = True,
+        price = 100
 
     )
     product8 = Product(
@@ -65,6 +71,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year8',
         type = 'Jordans',
         status = False,
+        price = 100
 
     )
     product9 = Product(
@@ -73,6 +80,7 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year9',
         type = 'Jordans',
         status = True,
+        price = 100
 
     )
     product10 = Product(
@@ -81,6 +89,8 @@ def seed_products():
         description = 'Rock out in these new shoes for the school year11',
         type = 'Jordans',
         status = False,
+        price = 100
+        
     )
 
 

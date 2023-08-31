@@ -42,3 +42,14 @@ def create_product():
         db.session.commit()
         return product.to_dict()
     return {'errors': form.errors}, 400
+
+@product_routes.route('/deleteProduct/<int:id>', methods=['DELETE'])
+@login_required
+def delete_product(id):
+    prod = Product.query.get(id)
+    if prod and current_user.role == True:
+        db.session.delete(prod)
+        db.session.commit()
+        return {'message': 'product deleted'}
+    else:
+        return {'error': "You aren't allowed to delete things"}
